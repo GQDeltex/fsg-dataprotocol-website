@@ -11,134 +11,58 @@
 		<script src="script.js"></script>
 		
 		<style>
-			@import url("https://fonts.googleapis.com/css?family=PT+Serif");
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
-body {  
-  background: #2C2A2A;
-  text-rendering: optimizelegibility;
+body {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  color: #F5F3EC;
+  background: #333;
   margin: 0px;
   padding: 0px;
-  height: 100%;
 }
 
-h1 {
-  -webkit-animation: color 0.5s ease-in-out;
-          animation: color 0.5s ease-in-out;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: #fff;
-  opacity: 0;
-  font-size: 4rem;
-  font-weight: normal;
-  -webkit-transform: translateY(-2.3rem);
-          transform: translateY(-2.3rem);
- 
-  font-family: 'Oswald', sans-serif;
-}
-
-.block-reveal {
-  height: 10rem;
-  line-height: 10rem;
-  overflow: hidden;
+main {
+  z-index: 1;
   position: relative;
-  text-align: center;
-  width: 35rem;
-}
-
-.block {
-  -webkit-animation: reveal 1s ease-in-out;
-          animation: reveal 1s ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background: salmon;
   height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/165672/O2GIxau.jpg") no-repeat scroll center center/cover transparent;
+  background-color:#b06466;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.8);
 }
 
-@-webkit-keyframes reveal {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
-@keyframes reveal {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  50% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-@-webkit-keyframes color {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes color {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-			
-			@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
-
-
-.wrapper {
-  background: url("img/computer-1516204_960_720.jpg") no-repeat scroll center center/cover transparent;
-  min-height: 100vh;
-  transform-origin: center bottom 0px;
-  transition: all 0.5s ease 0s;
-  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
-}
-
-body.tight .wrapper {
-  transform: translateY(-60px) scale(0.9);
-  cursor: pointer;
-}
-
-.footer {
-  width: 90%;
-  max-width: 1440px;
-  margin: 0px auto;
+footer {
+  position: relative;
+  z-index: -2;
+  height: 300px;
+  background: none repeat scroll 0% 0% #31353A;
+  font-size: 12px;
+  color: #CCC;
   text-align: center;
-  min-height: 200px;
+}
+footer h1 {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 110px;
+  margin-left: -400px;
+  width: 800px;
+  list-style: outside none none;
+  text-align: center;
   font-weight: bold;
   color: #FFF;
   font-size: 2.125rem;
-  font-family: "Raleway", sans-serif;
-  padding-top: 40px;
+  
 }
+
+
+
 
 @-moz-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
@@ -154,7 +78,6 @@ body.tight .wrapper {
     transform: translateY(-15px);
   }
 }
-
 @-webkit-keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
@@ -169,7 +92,6 @@ body.tight .wrapper {
     transform: translateY(-15px);
   }
 }
-
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -moz-transform: translateY(0);
@@ -210,16 +132,15 @@ body.tight .wrapper {
 		</style>
 	</head>
 	<body>
-	<div class="wrapper">
 		<a href="https://github.com/GQdeltex/FSG-DataProtocol"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-		<div class="block-reveal">
-		    <div class="block"></div>
-		    <h1>FSG-DataProtocol</h1>
-		</div>
+<main>
+  <div class="arrow animated bounce">
+</main>
+<footer>
+  <h1>Hi, I'm a Fixed-Footer!</h1>
+</footer>
 
-  <div class="arrow animated bounce"></div>
-</div>
-<div class="footer">FOOTER!</div>
+
 
 	</body>
 </html>
