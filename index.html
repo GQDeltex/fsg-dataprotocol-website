@@ -8,13 +8,7 @@
 		<meta name="author" content="PartyGuy01" />
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js" type="text/javascript"></script>
 		<script src="script.js"></script>
-		<script>
-			cheet('f s g d p', function () {
- 			 alert('god mode enabled ;)');
-			});
-		</script>
 		
 		<style>
 			@import url("https://fonts.googleapis.com/css?family=PT+Serif");
@@ -225,7 +219,46 @@ a {
 		    <h1>FSG-DataProtocol</h1>
 		</div></center>
 
-  <div class="arrow animated bounce"></div>
+ <!-- The wrapper div. -->
+<div style="position:relative; 
+            font-size:60px; 
+            width:300px; 
+            height:60px; 
+            overflow:hidden; 
+            margin:0 auto 0 auto; 
+            border:none">
+<!-- The content of the wrapper div. -->
+<div style="float:left;"></div>
+<div><div class="arrow animated bounce"></div></div>
+<div style="text-align:center;"></div>
+<div style="clear:both;"></div>
+<!-- The easter egg div, also within the the wwapper div. -->
+<div style="position:absolute; 
+            top:0px; 
+            right:0px; 
+            z-index:99; 
+            background-color:transparent; 
+            width:40px; 
+            height:60px;" 
+     onmouseover="MouseoverMessageInAlertBox()"></div>
+</div>
+<!-- End of wrapper div. -->
+		<script type="text/javascript">
+var firstTime = true;
+var message = "Cool. You tried it!";
+var later = "\n\nThis is the real easter egg.\n\nThe first message isn't a real easter egg because the web page says what to do.\n\nThis one, however, is a message revealed only if the number '3' is hovered over more than once.\n\n "
+function MouseoverMessageInAlertBox()
+{
+   if(firstTime) { alert(message); }
+   else { alert(later); }
+   firstTime = false;
+}
+</script>
+
+
+
+
+		
 </div>
 <div class="footer">
 	The Data-Transfer-Protocol made by the <a href="http://fsg-pfullingen.de/" target="_blank">FSG-Pfullingen</a> Computer Science Club 2017.<br>
